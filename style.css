@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Alegreya", serif;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.scene-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: scene 4.5s alternate forwards;
+}
+
+.scene-2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  animation: scene 5.5s alternate forwards;
+  animation-delay: 5s;
+}
+
+.scene-2 span {
+  font-size: 3rem;
+  font-family: "Shojumaru", system-ui;
+  animation: fadeIn 1s forwards;
+  animation-delay: 5s;
+  z-index: 1;
+  opacity: 0;
+}
+
+.scene-2 span:nth-child(1) {
+  animation-delay: 5.7s;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff,
+    0 0 5px #fff;
+}
+
+.scene-2 span:nth-child(2) {
+  animation-delay: 7s;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff,
+    0 0 5px #fff;
+}
+
+.scene-2 span:nth-child(3) {
+  color: red;
+  animation-delay: 8.3s;
+  text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red, 0 0 4px red, 0 0 5px red;
+}
+
+.scene-2 .circle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: circle 1.3s forwards;
+  animation-delay: 9.5s;
+  opacity: 0;
+  box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff, 0 0 5px #ffffff,
+    0 0 5px #ffffff;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem 6rem;
+}
+
+header {
+  height: 10vh;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 9999;
+  animation: pageIn 2s forwards;
+  animation-delay: 10.1s;
+}
+
+header .container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header .container .content .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container .content .logo h1 {
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+header .container .content nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header .container .content nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+header .container .content nav a::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid red;
+  transform: scaleX(0);
+  transition: transform 0.1s linear;
+}
+
+header .container .content nav a:hover::after {
+  transform: scaleX(0.8);
+  transition: transform 0.1s linear;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  opacity: 0;
+  animation: pageIn 2s forwards;
+  animation-delay: 10.1s;
+}
+
+.hero .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero .container .content video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: pageIn 2s forwards;
+  animation-delay: 10.1s;
+}
+
+.hero .container .content svg {
+  z-index: 3;
+  margin-bottom: -9rem;
+  opacity: 0;
+  animation: pageIn 2s forwards;
+  animation-delay: 10.2s;
+}
+
+.hero .container .content svg text {
+  text-transform: uppercase;
+  font-family: "Shojumaru", system-ui;
+  font-size: 4rem;
+  animation: stroke 3.5s infinite alternate;
+  stroke-width: 3;
+  stroke: white;
+}
+
+.hero .container .content .about {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  width: 35%;
+}
+
+.hero .container .content .about p {
+  text-align: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 11s;
+}
+
+.hero .container .content .arrow {
+  cursor: pointer;
+  position: absolute;
+  left: 49.3%;
+  bottom: 5rem;
+  width: 50px;
+  height: 50px;
+  z-index: 8;
+  animation: arrow 2s infinite alternate;
+  animation-delay: 11s;
+}
+
+@keyframes stroke {
+  0% {
+    stroke: red;
+    stroke-width: 0;
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+  }
+  70% {
+    stroke: white;
+  }
+  80% {
+    stroke: red;
+    stroke-width: 3;
+  }
+  100% {
+    stroke: white;
+    stroke-width: 0;
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+  }
+}
+
+@keyframes circle {
+  from {
+    display: block;
+    scale: 0;
+    opacity: 0;
+    filter: brightness(100%);
+  }
+
+  to {
+    scale: 42;
+    opacity: 1;
+    filter: brightness(0%);
+  }
+}
+
+@keyframes scene {
+  from {
+    display: flex;
+  }
+
+  to {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow {
+  from {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(1.5rem);
+    opacity: 1;
+  }
+}
