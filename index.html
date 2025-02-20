@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso Digestivo de la Papa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+                <span class="moon">🌙</span>
+                <span class="sun">☀️</span>
+            </div>
+        </label>
+    </div>
+    <header>
+        <h1>El Viaje de la Papa por el Sistema Digestivo</h1>
+    </header>
+
+    <main>
+        <div class="timeline">
+            <div class="timeline-item" onclick="toggleContent('prep')">
+                <h2>1. Preparación y Cocción</h2>
+                <div class="content" id="prep">
+                    <p>Durante la cocción ocurren cambios fundamentales en la estructura de la papa:</p>
+                    <ul>
+                        <li>Gelatinización del almidón:</li>
+                        <ul>
+                            <li>Los gránulos de almidón absorben agua</li>
+                            <li>Se hinchan y rompen sus estructuras cristalinas</li>
+                            <li>El almidón se vuelve más accesible a las enzimas digestivas</li>
+                            <li>La textura se vuelve más suave y pegajosa</li>
+                        </ul>
+                        <li>Desnaturalización de proteínas:</li>
+                        <ul>
+                            <li>El calor modifica la estructura de las proteínas</li>
+                            <li>Mejora la digestibilidad</li>
+                        </ul>
+                        <li>Ablandamiento de paredes celulares:</li>
+                        <ul>
+                            <li>Las células se separan más fácilmente</li>
+                            <li>La textura se vuelve más suave</li>
+                            <li>Facilita la liberación de nutrientes</li>
+                        </ul>
+                    </ul>
+                    <div class="interactive-image">
+                        <img src="papa.gif" alt="Papa cocinándose">
+                    </div>
+                    <div class="info-box">
+                        <h3>¿Sabías que?</h3>
+                        <p>La temperatura ideal para la gelatinización del almidón de papa es entre 58-66°C</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('initial-contact')">
+                <h2>¡El Primer Bocado!</h2>
+                <div class="content" id="initial-contact">
+                    <p>Imagina esto: acabas de cocinar una papa perfectamente dorada y la llevas a tu boca. En ese momento, ¡tu cuerpo ya se está preparando para la acción! Tu boca empieza a salivar incluso antes del primer bocado, ¿no te ha pasado?</p>
+                    <ul>
+                        <li>Lo primero que notas:</li>
+                        <ul>
+                            <li>Sientes el calorcito de la papa en tu lengua</li>
+                            <li>Percibes ese sabor característico que tanto nos gusta</li>
+                            <li>Tu boca se llena de saliva, preparándose para el festín</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¿Te has dado cuenta?</h3>
+                        <p>¡Es increíble cómo tu boca sabe exactamente qué hacer! Incluso antes de empezar a masticar, tu cuerpo ya está listo para la digestión.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('mouth-process')">
+                <h2>¿Qué Pasa en Tu Boca?</h2>
+                <div class="content" id="mouth-process">
+                    <p>Bien, ahora viene lo interesante. Cuando empiezas a masticar la papa, ocurre toda una serie de eventos fascinantes. Es como una pequeña fábrica trabajando en tu boca:</p>
+                    <ul>
+                        <li>Mientras masticas:</li>
+                        <ul>
+                            <li>Tus dientes hacen el trabajo pesado, triturando la papa en pedacitos</li>
+                            <li>Tu lengua mueve todo de un lado a otro, como un chef mezclando ingredientes</li>
+                            <li>La saliva empieza a deshacer la papa, ¿notas cómo cambia la textura?</li>
+                        </ul>
+                    </ul>
+                    <p>¿Has notado que si mantienes la papa un rato en tu boca empieza a saber un poquito dulce? ¡Eso es porque tu saliva está convirtiendo el almidón en azúcares más simples! Increíble, ¿verdad?</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('swallowing')">
+                <h2>El Viaje Continúa: ¡A Tragar!</h2>
+                <div class="content" id="swallowing">
+                    <p>Después de masticar bien (espero que no te la hayas tragado muy rápido 😉), tu lengua empuja ese bocado de papa hacia atrás. Es como un tobogán natural:</p>
+                    <ul>
+                        <li>El gran viaje:</li>
+                        <ul>
+                            <li>La papa ya no es como era antes, ahora es como un puré suavecito</li>
+                            <li>Tu garganta sabe exactamente qué hacer (¡ni tienes que pensarlo!)</li>
+                            <li>Todo baja por el esófago como por un tobogán</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>Consejo amigable</h3>
+                        <p>Mastica bien tu papa, ¡tu estómago te lo agradecerá! Además, así disfrutas más el sabor 😊</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('stomach-journey')">
+                <h2>¡Bienvenidos al Estómago!</h2>
+                <div class="content" id="stomach-journey">
+                    <p>Ahora es cuando las cosas se ponen realmente interesantes. Tu estómago es como una licuadora súper potente con sus propios jugos especiales:</p>
+                    <ul>
+                        <li>En el estómago:</li>
+                        <ul>
+                            <li>Los jugos gástricos se mezclan con tu papa masticada</li>
+                            <li>Es como una sopa ácida que sigue descomponiendo todo</li>
+                            <li>Tu estómago se mueve y revuelve todo como una lavadora</li>
+                        </ul>
+                    </ul>
+                    <p>¿Sabes qué es lo más cool? Tu estómago sabe exactamente qué hacer con cada bocado que le mandas. Es como tener un chef experto trabajando 24/7 en tu interior.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('intestine-adventure')">
+                <h2>La Aventura en los Intestinos</h2>
+                <div class="content" id="intestine-adventure">
+                    <p>¡Llegamos a la parte más larga del viaje! Imagina tus intestinos como un parque acuático súper largo con diferentes estaciones:</p>
+                    <ul>
+                        <li>En el intestino delgado:</li>
+                        <ul>
+                            <li>Es como si tuvieras millones de manitas diminutas absorbiendo los nutrientes</li>
+                            <li>Tu papa se convierte en energía que tu cuerpo puede usar</li>
+                            <li>¡Es aquí donde realmente aprovechas todo lo bueno de tu papa!</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¿Sabías que?</h3>
+                        <p>¡Tu intestino delgado es tan largo que podría cubrir una cancha de tenis! Y todo ese espacio es necesario para absorber bien los nutrientes 🎾</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('stomach')">
+                <h2>3. Esófago y Estómago</h2>
+                <div class="content" id="stomach">
+                    <p>El bolo alimenticio viaja por el sistema digestivo:</p>
+                    <ul>
+                        <li>El esófago transporta el alimento mediante movimientos peristálticos</li>
+                        <li>En el estómago:</li>
+                        <ul>
+                            <li>El ácido clorhídrico crea un ambiente muy ácido</li>
+                            <li>Se desnaturalizan las proteínas restantes</li>
+                            <li>La amilasa salival deja de funcionar</li>
+                            <li>La pepsina comienza a descomponer proteínas</li>
+                        </ul>
+                        <li>El alimento se convierte en quimo</li>
+                    </ul>
+                    <div class="interactive-image">
+                        <img src="stomach-digestion.jpg" alt="Digestión en el estómago">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('small-intestine')">
+                <h2>4. Intestino Delgado</h2>
+                <div class="content" id="small-intestine">
+                    <p>Aquí ocurre la mayor parte de la digestión y absorción:</p>
+                    <ul>
+                        <li>Enzimas pancreáticas:</li>
+                        <ul>
+                            <li>La amilasa pancreática continúa degradando el almidón</li>
+                            <li>Se producen maltosa, dextrinas y oligosacáridos</li>
+                        </ul>
+                        <li>Enzimas intestinales:</li>
+                        <ul>
+                            <li>La maltasa convierte la maltosa en glucosa</li>
+                            <li>Los nutrientes son absorbidos por los enterocitos</li>
+                        </ul>
+                        <li>La glucosa pasa al torrente sanguíneo</li>
+                    </ul>
+                    <div class="interactive-image">
+                        <img src="small-intestine.jpg" alt="Digestión en el intestino delgado">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('large-intestine')">
+                <h2>5. Intestino Grueso</h2>
+                <div class="content" id="large-intestine">
+                    <p>Procesamiento final y fermentación:</p>
+                    <ul>
+                        <li>La fibra y componentes no digeribles llegan aquí</li>
+                        <li>La microbiota intestinal:</li>
+                        <ul>
+                            <li>Fermenta la fibra</li>
+                            <li>Produce ácidos grasos de cadena corta</li>
+                            <li>Genera gases como CO2, metano e hidrógeno</li>
+                        </ul>
+                        <li>Se reabsorbe agua y minerales</li>
+                        <li>Se compactan los residuos no digeridos</li>
+                    </ul>
+                    <div class="interactive-image">
+                        <img src="large-intestine.jpg" alt="Procesamiento en el intestino grueso">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('elimination')">
+                <h2>6. Eliminación</h2>
+                <div class="content" id="elimination">
+                    <p>La última etapa del proceso digestivo:</p>
+                    <ul>
+                        <li>Formación de las heces:</li>
+                        <ul>
+                            <li>Contiene fibra no digerida</li>
+                            <li>Células muertas</li>
+                            <li>Bacterias</li>
+                            <li>Otros desechos</li>
+                        </ul>
+                        <li>El material se expulsa a través del recto y el ano</li>
+                    </ul>
+                    <div class="interactive-image">
+                        <img src="popo.gif" alt="Proceso de eliminación">
+                    </div>
+                    <div class="info-box">
+                        <h3>¡Dato Curioso!</h3>
+                        <p>¡El proceso completo desde que comes la papa hasta la eliminación puede durar entre 24-72 horas! 🕒</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('cooking-science')">
+                <h2>¿Qué le Pasa a Nuestra Papa Cuando se Cocina?</h2>
+                <div class="content" id="cooking-science">
+                    <p>¡Prepárate para algo fascinante! Cuando cocinamos nuestra papa, ocurre una verdadera transformación química. Es como si la papa se preparara para ser más fácil de digerir:</p>
+                    <ul>
+                        <li>El almidón se transforma:</li>
+                        <ul>
+                            <li>¿Ves esa textura harinosa de la papa cruda? Es almidón en forma de cristales duros</li>
+                            <li>Al calentarla, estos cristales absorben agua y ¡pum! Se hinchan como globitos</li>
+                            <li>Es lo que los científicos llaman "gelatinización" - ¡por eso la papa se vuelve suavecita!</li>
+                        </ul>
+                        <li>Las proteínas también cambian:</li>
+                        <ul>
+                            <li>El calor hace que las proteínas se "desenrollen" (los científicos lo llaman desnaturalización)</li>
+                            <li>¡Es como si un ovillo de lana se deshiciera en hilos sueltos!</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Dato Químico Divertido!</h3>
+                        <p>¿Sabías que el almidón de la papa está hecho de dos componentes principales? ¡La amilosa (20%) y la amilopectina (80%)! Cuando se cocinan, ambos se vuelven más fáciles de digerir 🥔✨</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('enzyme-breakdown')">
+                <h2>¡Las Enzimas al Rescate!</h2>
+                <div class="content" id="enzyme-breakdown">
+                    <p>Ahora viene la parte más emocionante: ¡cómo tu cuerpo descompone la papa! Es como tener un equipo de pequeños trabajadores (las enzimas) que van transformando todo:</p>
+                    <ul>
+                        <li>En tu boca (¡el primer laboratorio!):</li>
+                        <ul>
+                            <li>La amilasa salival (nuestra primera enzima estrella) empieza a cortar el almidón</li>
+                            <li>Convierte esas largas cadenas de almidón en trozos más pequeños llamados maltosa</li>
+                            <li>¡Por eso la papa empieza a saber dulce si la masticas mucho tiempo!</li>
+                        </ul>
+                        <li>En tu estómago:</li>
+                        <ul>
+                            <li>El ácido clorhídrico (pH 2 - ¡súper ácido!) prepara todo</li>
+                            <li>La pepsina (otra enzima) se encarga de las pocas proteínas que tiene la papa</li>
+                            <li>¡Es como tener una mini-licuadora química!</li>
+                        </ul>
+                        <li>En el intestino delgado (¡el laboratorio principal!):</li>
+                        <ul>
+                            <li>La amilasa pancreática continúa el trabajo de descomposición</li>
+                            <li>La maltasa convierte la maltosa en glucosa (¡el azúcar que tu cuerpo adora!)</li>
+                            <li>Las disacaridasas rompen los azúcares dobles en simples</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Química en Acción!</h3>
+                        <p>La transformación completa es: Almidón → Maltosa → Glucosa. ¡Es como desarmar un gran rompecabezas en piezas que tu cuerpo puede usar! 🧩</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('nutrient-breakdown')">
+                <h2>¡Los Componentes de Nuestra Papa!</h2>
+                <div class="content" id="nutrient-breakdown">
+                    <p>¿Te has preguntado qué tiene realmente una papa? ¡Vamos a descomponerla! Es como hacer un inventario de una pequeña fábrica de nutrientes:</p>
+                    <ul>
+                        <li>Los carbohidratos (¡el ingrediente estrella!):</li>
+                        <ul>
+                            <li>Almidón: 15-20% de la papa (¡el rey de los carbohidratos!)</li>
+                            <li>Fibra dietética: 1-2% (¡para mantener feliz a tu intestino!)</li>
+                            <li>Azúcares simples: menos del 1% (¡aumentan al cocinar!)</li>
+                        </ul>
+                        <li>Otros componentes importantes:</li>
+                        <ul>
+                            <li>Agua: ¡75-80% (¡sí, las papas son muy jugosas!)</li>
+                            <li>Proteínas: 2-3% (pequeña pero importante cantidad)</li>
+                            <li>Minerales: potasio, fósforo y magnesio (¡tus electrolitos amigos!)</li>
+                            <li>Vitamina C: ¡Sorpresa! ¡Las papas tienen bastante!</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Super Dato!</h3>
+                        <p>Una papa mediana tiene tanto potasio como un plátano, ¡y solo 110 calorías! 🥔=🍌</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('carb-transformation')">
+                <h2>¡La Transformación Mágica de los Carbohidratos!</h2>
+                <div class="content" id="carb-transformation">
+                    <p>¡Prepárate para un viaje increíble! Vamos a ver cómo esa papa que te comiste se transforma en energía pura para tu cuerpo:</p>
+                    <ul>
+                        <li>El gran rompecabezas del almidón:</li>
+                        <ul>
+                            <li>Imagina el almidón como un collar larguísimo de cuentas de glucosa</li>
+                            <li>La amilosa es como un collar en línea recta (¡puede tener hasta 2000 glucosas!)</li>
+                            <li>La amilopectina es como un collar con muchas ramitas (¡más de 100,000 glucosas!)</li>
+                        </ul>
+                        <li>¡Comienza el desarmado!</li>
+                        <ul>
+                            <li>La amilasa salival empieza cortando el almidón en pedacitos (dextrinas)</li>
+                            <li>Luego estos se convierten en maltosa (dos glucosas unidas)</li>
+                            <li>¡Es como si cortaras ese collar en parejas de cuentas!</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Dato Molecular!</h3>
+                        <p>Cada molécula de almidón puede contener ¡millones de unidades de glucosa! 🔬✨</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('sugar-journey')">
+                <h2>¡El Viaje del Azúcar!</h2>
+                <div class="content" id="sugar-journey">
+                    <p>Ahora viene lo más interesante: ¡cómo los azúcares grandes se convierten en pequeñitos!</p>
+                    <ul>
+                        <li>De grande a pequeño:</li>
+                        <ul>
+                            <li>Almidón → Dextrinas (pedazos medianos)</li>
+                            <li>Dextrinas → Maltosa (azúcar doble)</li>
+                            <li>Maltosa → Glucosa (¡el azúcar más simple y útil!)</li>
+                        </ul>
+                        <li>¿Quién hace todo este trabajo?</li>
+                        <ul>
+                            <li>Amilasa salival: rompe el almidón en trozos</li>
+                            <li>Amilasa pancreática: ¡sigue rompiendo en el intestino!</li>
+                            <li>Maltasa: convierte la maltosa en glucosa</li>
+                            <li>Isomaltasa: se encarga de las ramitas de amilopectina</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Curiosidad Dulce!</h3>
+                        <p>¡Tu cuerpo es tan eficiente que puede convertir todo ese almidón en glucosa en menos de 2 horas! 🕒</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('glucose-destiny')">
+                <h2>¿A Dónde Va Toda Esa Glucosa?</h2>
+                <div class="content" id="glucose-destiny">
+                    <p>¡La glucosa tiene un destino muy importante! Es como el combustible premium para tu cuerpo:</p>
+                    <ul>
+                        <li>El viaje por la sangre:</li>
+                        <ul>
+                            <li>La glucosa entra a tu sangre a través del intestino</li>
+                            <li>La insulina (como un GPS) le dice dónde ir</li>
+                            <li>¡Tus células la reciben como energía instantánea!</li>
+                        </ul>
+                        <li>¿Y si hay demasiada?</li>
+                        <ul>
+                            <li>El hígado la guarda como glucógeno (¡como una batería de reserva!)</li>
+                            <li>Los músculos también almacenan algo</li>
+                            <li>El resto se puede convertir en grasa (¡para días de emergencia!)</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Dato Energético!</h3>
+                        <p>Una papa mediana puede proporcionar hasta 37 gramos de carbohidratos, ¡suficiente energía para una hora de ejercicio! 💪</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('molecular-magic')">
+                <h2>¡La Magia a Nivel Molecular!</h2>
+                <div class="content" id="molecular-magic">
+                    <p>¡Vamos a ver qué pasa con cada molécula! Es como una danza química súper organizada:</p>
+                    <ul>
+                        <li>Los enlaces se rompen:</li>
+                        <ul>
+                            <li>Enlaces α-1,4: unen las glucosas en línea recta</li>
+                            <li>Enlaces α-1,6: forman las ramitas en la amilopectina</li>
+                            <li>¡Cada tipo necesita su propia enzima especial!</li>
+                        </ul>
+                        <li>La transformación final:</li>
+                        <ul>
+                            <li>C₆H₁₀O₅ (almidón) → C₁₂H₂₂O₁₁ (maltosa)</li>
+                            <li>C₁₂H₂₂O₁₁ → 2(C₆H₁₂O₆) (glucosa)</li>
+                            <li>¡Es como desarmar y rearmar un LEGO molecular! 🧱</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Química Divertida!</h3>
+                        <p>¡Cada molécula de glucosa tiene la forma de un anillo hexagonal! Es como un pequeño donut molecular 🍩</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('enzyme-party')">
+                <h2>¡La Gran Fiesta de las Enzimas!</h2>
+                <div class="content" id="enzyme-party">
+                    <p>¡Prepárate para conocer a todas las enzimas que trabajan en equipo para digerir tu papa! Es como una línea de producción súper organizada:</p>
+                    <ul>
+                        <li>En la boca (¡El equipo salival!):</li>
+                        <ul>
+                            <li>α-amilasa salival (también llamada ptialina): ¡nuestra primera heroína!</li>
+                            <li>Lipasa lingual: aunque la papa tiene poquita grasa, ¡ella está lista para actuar!</li>
+                            <li>Lisozima: mantiene todo limpio mientras trabajamos</li>
+                        </ul>
+                        <li>En el estómago (¡El escuadrón ácido!):</li>
+                        <ul>
+                            <li>Pepsina: rompe las pocas proteínas que encuentra</li>
+                            <li>Renina: trabaja junto a la pepsina</li>
+                            <li>Lipasa gástrica: sigue buscando grasitas para descomponer</li>
+                            <li>¡Nota importante! La amilasa salival deja de trabajar aquí por el ácido 🚫</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Dato Curioso!</h3>
+                        <p>¡Tu estómago produce unos 2-3 litros de jugo gástrico al día! Es como una pequeña fábrica de ácido 🧪</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('pancreas-power')">
+                <h2>¡El Poder del Páncreas!</h2>
+                <div class="content" id="pancreas-power">
+                    <p>¡Ahora llega el equipo pesado! El páncreas envía sus mejores enzimas al intestino delgado:</p>
+                    <ul>
+                        <li>Las estrellas pancreáticas:</li>
+                        <ul>
+                            <li>α-amilasa pancreática: ¡mucho más potente que la de la saliva!</li>
+                            <li>Tripsina: busca proteínas que hayan sobrevivido al estómago</li>
+                            <li>Quimotripsina: ayuda a la tripsina en su trabajo</li>
+                            <li>Carboxipeptidasa: da los toques finales a las proteínas</li>
+                            <li>Lipasas: siguen al pendiente de cualquier grasa</li>
+                        </ul>
+                        <li>¿Cómo trabajan?</li>
+                        <ul>
+                            <li>Se activan solo cuando llegan al intestino (¡son muy listas!)</li>
+                            <li>Trabajan mejor en un ambiente básico (pH 7-8)</li>
+                            <li>¡Pueden descomponer toneladas de nutrientes en minutos! ⚡</li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('intestine-enzymes')">
+                <h2>¡Las Enzimas del Intestino Delgado!</h2>
+                <div class="content" id="intestine-enzymes">
+                    <p>¡El intestino delgado tiene sus propias enzimas pegadas a sus paredes! Son como pequeñas herramientas especializadas:</p>
+                    <ul>
+                        <li>El equipo de descomposición final:</li>
+                        <ul>
+                            <li>Maltasa: convierte maltosa en glucosa (¡el azúcar que tu cuerpo ama!)</li>
+                            <li>Sacarasa: se encarga de la sacarosa</li>
+                            <li>Lactasa: aunque no hay lactosa en la papa, ¡está lista por si acaso!</li>
+                            <li>Isomaltasa: maneja las ramificaciones difíciles del almidón</li>
+                        </ul>
+                        <li>Las peptidasas del intestino:</li>
+                        <ul>
+                            <li>Aminopeptidasa: corta proteínas desde un extremo</li>
+                            <li>Dipeptidasa: da los últimos cortes para liberar aminoácidos</li>
+                            <li>¡Trabajan como un equipo de demolición súper preciso! 🏗️</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Súper Dato!</h3>
+                        <p>¡Las enzimas del intestino delgado son tan eficientes que pueden procesar hasta 12 litros de comida y jugos digestivos al día! 🌊</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item" onclick="toggleContent('enzyme-teamwork')">
+                <h2>¡El Gran Trabajo en Equipo!</h2>
+                <div class="content" id="enzyme-teamwork">
+                    <p>¿Te has preguntado cómo todas estas enzimas se coordinan? ¡Es como una coreografía perfecta!</p>
+                    <ul>
+                        <li>La secuencia mágica:</li>
+                        <ul>
+                            <li>Primero, la amilasa salival empieza el trabajo (¡como un primer baile!)</li>
+                            <li>Luego, las enzimas del estómago preparan todo</li>
+                            <li>El páncreas manda sus súper enzimas</li>
+                            <li>¡Y el intestino delgado da los toques finales!</li>
+                        </ul>
+                        <li>¿Por qué es tan especial?</li>
+                        <ul>
+                            <li>Cada enzima sabe exactamente cuándo actuar</li>
+                            <li>Trabajan en el pH perfecto para ellas</li>
+                            <li>¡Nunca se equivocan de sustrato! (¡Como si tuvieran GPS!)</li>
+                        </ul>
+                    </ul>
+                    <div class="info-box">
+                        <h3>¡Dato Asombroso!</h3>
+                        <p>¡Tu cuerpo produce más de 22 tipos diferentes de enzimas digestivas! Cada una con su trabajo especial 🎯</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
