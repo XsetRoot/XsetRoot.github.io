@@ -1,0 +1,788 @@
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #34495e;
+    --color-accent: #3498db;
+    --color-background: #f8f9fa;
+    --color-text: #2c3e50;
+    --color-card-bg: #ffffff;
+    --color-info-box: #e8f4f8;
+    --color-border: rgba(0,0,0,0.1);
+    --color-nav-bg: rgba(255, 255, 255, 0.95);
+    --color-footer-bg: #2c3e50;
+    --color-footer-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    --color-primary: #ecf0f1;
+    --color-secondary: #bdc3c7;
+    --color-accent: #3498db;
+    --color-background: #1a1a1a;
+    --color-text: #ecf0f1;
+    --color-card-bg: #2c2c2c;
+    --color-info-box: #2c3e50;
+    --color-border: rgba(255,255,255,0.1);
+    --color-nav-bg: rgba(28, 28, 28, 0.95);
+    --color-footer-bg: #000000;
+    --color-footer-text: #ecf0f1;
+}
+
+:root[data-theme="light"] {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --card-background: white;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+:root[data-theme="dark"] {
+    --primary-color: #66bb6a;
+    --secondary-color: #81c784;
+    --background-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-background: #2d2d2d;
+    --shadow-color: rgba(0,0,0,0.3);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    background: var(--card-background);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-item h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(-20px);
+}
+
+.content.active {
+    max-height: 2000px; /* Altura máxima suficiente para el contenido */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Añadir animación de salida */
+.content.closing {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.interactive-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.interactive-image:hover {
+    transform: scale(1.02);
+}
+
+.interactive-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.interactive-image img:hover {
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-position: inside;
+    margin: 15px 0;
+}
+
+li {
+    margin: 8px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding: 10px;
+    }
+    
+    .timeline-item {
+        padding: 15px;
+    }
+}
+
+.info-box {
+    background-color: #e8f5e9;
+    border-left: 4px solid var(--primary-color);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateX(10px);
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+ul ul {
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+ul ul li {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.timeline-item:hover .info-box {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) {
+    border-left: 4px solid var(--primary-color);
+}
+
+.timeline-item:nth-child(even) {
+    border-right: 4px solid var(--secondary-color);
+}
+
+.info-box p {
+    line-height: 1.8;
+    font-style: italic;
+}
+
+.content ul ul li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.content ul ul li:before {
+    content: "•";
+    position: absolute;
+    left: 5px;
+    color: var(--primary-color);
+}
+
+.interactive-image:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Estilos para el switch de tema */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+    padding: 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.slider .fa-moon {
+    color: #f1c40f;
+    margin-right: 4px;
+}
+
+.slider .fa-sun {
+    color: #f39c12;
+    margin-left: 4px;
+}
+
+input:checked + .slider {
+    background-color: #2c3e50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Asegurar transiciones suaves */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.timeline-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh; /* Altura completa de la ventana */
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(45deg, #1a1a1a, #2c3e50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegurar que esté por encima del contenido */
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Ocultar el contenido inicial */
+main {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+main.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.timeline-item {
+    background: var(--color-card-bg);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--color-border);
+}
+
+.timeline-content {
+    cursor: pointer;
+}
+
+.timeline-item h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.content {
+    display: none;
+    padding: 1rem 0;
+}
+
+.content.active {
+    display: block;
+}
+
+/* Info boxes */
+.info-box {
+    background: var(--color-info-box);
+    border-left: 4px solid var(--color-accent);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+    color: var(--color-text);
+}
+
+.info-box h3 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Interactive images */
+.interactive-image {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.interactive-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+/* .site-footer {
+    background: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.footer-section h3 {
+    color: var(--color-footer-text);
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+} */
+
+/* Estilos mejorados para el botón CTA */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: var(--color-accent);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    z-index: 1;
+}
+
+/* Efecto de brillo */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+/* Animación del ícono */
+.cta-button i {
+    transition: transform 0.5s ease;
+    animation: bounceArrow 2s infinite;
+}
+
+/* Efectos hover */
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    background: #2980b9;
+}
+
+.cta-button:hover::before {
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+.cta-button:hover i {
+    animation: none;
+    transform: translateY(3px);
+}
+
+/* Efecto active */
+.cta-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+}
+
+/* Animación del bounce para la flecha */
+@keyframes bounceArrow {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(5px);
+    }
+    60% {
+        transform: translateY(3px);
+    }
+}
+
+/* Animación de pulso para el botón */
+.cta-button {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(52, 152, 219, 0.5);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    }
+}
+
+/* Adaptación para modo oscuro */
+[data-theme="dark"] .cta-button {
+    background: #3498db;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+}
+
+[data-theme="dark"] .cta-button:hover {
+    background: #2980b9;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.3);
+}
+
+/* Listas */
+ul {
+    padding-left: 1.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .timeline {
+        padding: 1rem;
+    }
+
+    .timeline-item {
+        padding: 1rem;
+    }
+
+    .timeline-item h2 {
+        font-size: 1.5rem;
+    }
+
+    :root {
+        --font-size-base: 15px;
+    }
+}
+
+/* Añadir indicador de scroll */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+code, pre {
+    font-family: inherit;
+    font-size: 0.95em;
+}
+
+/* Asegurar que las imágenes tengan buen contraste en modo oscuro */
+[data-theme="dark"] img {
+    filter: brightness(.8) contrast(1.2);
+} 
+
+/* Añadir estas reglas para las animaciones */
+.content {
+    display: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    overflow: hidden;
+}
+
+.content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.5s ease forwards;
+}
+
+/* Animación para el despliegue */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        max-height: 2000px; /* Valor alto para permitir todo el contenido */
+    }
+}
+
+/* Mejorar la interactividad de los timeline items */
+.timeline-item {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Animación para los iconos */
+.timeline-item h2 i {
+    transition: transform 0.3s ease;
+}
+
+.timeline-item.active h2 i {
+    transform: rotate(180deg);
+}
+
+/* Animación para las imágenes */
+.interactive-image img {
+    transition: transform 0.3s ease;
+}
+
+.interactive-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Animación para los info-box */
+.info-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateX(10px);
+    box-shadow: -5px 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Añadir los estilos para las moléculas */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.node {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.connection {
+    position: absolute;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    transform-origin: left center;
+    animation: fadeInOut 4s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
